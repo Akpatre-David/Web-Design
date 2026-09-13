@@ -44,20 +44,20 @@ jobs:
         docker push ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
 
     # SSH into EC2 and deployment
-    - name: Deploy to EC2 Instance
-      uses: appleboy/ssh-action@1.2.2
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ubuntu
-        key: ${{ secrets.EC2_SSH_PRIAVTE_KEY }}
-        script: |
-          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+    # - name: Deploy to EC2 Instance
+    #   uses: appleboy/ssh-action@1.2.2
+    #   with:
+    #     host: ${{ secrets.EC2_HOST }}
+    #     username: ubuntu
+    #     key: ${{ secrets.EC2_SSH_PRIAVTE_KEY }}
+    #     script: |
+    #       sudo docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
 
-          sudo docker stop portfolio || true
-          sudo docker rm portfolio || true
+    #       sudo docker stop portfolio || true
+    #       sudo docker rm portfolio || true
 
-          sudo docker run -d \
-            --name portfolio \
-            --restart unless-stopped \
-            -p 80:80 \
-            ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+    #       sudo docker run -d \
+    #         --name portfolio \
+    #         --restart unless-stopped \
+    #         -p 80:80 \
+    #         ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
