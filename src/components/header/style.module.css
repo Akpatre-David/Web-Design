@@ -1,0 +1,64 @@
+.picture {
+  background-image: url("../../images/passport.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  background-repeat: no-repeat;
+  filter: brightness(20%);
+  color: rgb(255, 224, 224);
+  @media screen and (min-width: 768px) {
+    display: none;
+    width: 700px;
+  }
+}
+
+.picture > p:nth-child(1) {
+  font-size: 2rem;
+  padding-top: 10rem;
+  padding-inline-start: 3rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.picture > p:nth-child(2) {
+  padding-top: 1rem;
+  padding-inline-start: 3rem;
+}
+
+.sideBySide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-inline: 10rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sideBySide > div > p:nth-child(1) {
+  font-size: 5rem;
+  font-weight: 500;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.sideBySide > div > p:nth-child(2) {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  color: grey;
+}
+
+.image {
+  @media screen and (min-width: 768px) {
+    width: 40rem;
+  }
+}
+
+.Socialimage {
+  width: 20px;
+  padding-inline-end: 10px;
+  cursor: pointer;
+}

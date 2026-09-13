@@ -1,0 +1,24 @@
+body,
+html {
+  font-size: 62.5% !important;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  font-family: "BRFirma-Medium", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "BRFirma-Medium", sans-serif !important;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
